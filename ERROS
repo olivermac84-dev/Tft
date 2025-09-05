@@ -1,0 +1,47 @@
+C:\Users\Administrator\AppData\Local\Temp\.arduinoIDE-unsaved202585-364-h24lcg.ml8z5\sketch_sep5a\sketch_sep5a.ino: In function 'void loadMediaFiles()':
+C:\Users\Administrator\AppData\Local\Temp\.arduinoIDE-unsaved202585-364-h24lcg.ml8z5\sketch_sep5a\sketch_sep5a.ino:67:10: error: 'class arduino::UART' has no member named 'printf'; did you mean 'print'?
+   Serial.printf("Loaded %d media files\n", mediaCount);
+          ^~~~~~
+          print
+C:\Users\Administrator\AppData\Local\Temp\.arduinoIDE-unsaved202585-364-h24lcg.ml8z5\sketch_sep5a\sketch_sep5a.ino: In function 'void displayBMP(arduino::String)':
+C:\Users\Administrator\AppData\Local\Temp\.arduinoIDE-unsaved202585-364-h24lcg.ml8z5\sketch_sep5a\sketch_sep5a.ino:122:7: error: 'class TFT_eSPI' has no member named 'drawBmp'; did you mean 'drawArc'?
+   tft.drawBmp(bmpFile, 0, 0);
+       ^~~~~~~
+       drawArc
+C:\Users\Administrator\AppData\Local\Temp\.arduinoIDE-unsaved202585-364-h24lcg.ml8z5\sketch_sep5a\sketch_sep5a.ino: In function 'void displayGIF(arduino::String)':
+C:\Users\Administrator\AppData\Local\Temp\.arduinoIDE-unsaved202585-364-h24lcg.ml8z5\sketch_sep5a\sketch_sep5a.ino:132:28: error: no matching function for call to 'AnimatedGIF::open(SDLib::File&, void (&)(GIFDRAW*))'
+   gif.open(gifFile, GIFDraw);
+                            ^
+In file included from C:\Users\Administrator\AppData\Local\Temp\.arduinoIDE-unsaved202585-364-h24lcg.ml8z5\sketch_sep5a\sketch_sep5a.ino:4:0:
+C:\Users\Administrator\Documents\Arduino\libraries\AnimatedGIF\src/AnimatedGIF.h:221:9: note: candidate: int AnimatedGIF::open(uint8_t*, int, void (*)(GIFDRAW*))
+     int open(uint8_t *pData, int iDataSize, GIF_DRAW_CALLBACK *pfnDraw);
+         ^~~~
+C:\Users\Administrator\Documents\Arduino\libraries\AnimatedGIF\src/AnimatedGIF.h:221:9: note:   candidate expects 3 arguments, 2 provided
+C:\Users\Administrator\Documents\Arduino\libraries\AnimatedGIF\src/AnimatedGIF.h:223:9: note: candidate: int AnimatedGIF::open(const char*, void* (*)(const char*, int32_t*), void (*)(void*), int32_t (*)(GIFFILE*, uint8_t*, int32_t), int32_t (*)(GIFFILE*, int32_t), void (*)(GIFDRAW*))
+     int open(const char *szFilename, GIF_OPEN_CALLBACK *pfnOpen, GIF_CLOSE_CALLBACK *pfnClose, GIF_READ_CALLBACK *pfnRead, GIF_SEEK_CALLBACK *pfnSeek, GIF_DRAW_CALLBACK *pfnDraw);
+         ^~~~
+C:\Users\Administrator\Documents\Arduino\libraries\AnimatedGIF\src/AnimatedGIF.h:223:9: note:   candidate expects 6 arguments, 2 provided
+C:\Users\Administrator\AppData\Local\Temp\.arduinoIDE-unsaved202585-364-h24lcg.ml8z5\sketch_sep5a\sketch_sep5a.ino:133:28: error: no matching function for call to 'AnimatedGIF::playFrame(bool)'
+   while(gif.playFrame(false)){
+                            ^
+In file included from C:\Users\Administrator\AppData\Local\Temp\.arduinoIDE-unsaved202585-364-h24lcg.ml8z5\sketch_sep5a\sketch_sep5a.ino:4:0:
+C:\Users\Administrator\Documents\Arduino\libraries\AnimatedGIF\src/AnimatedGIF.h:228:9: note: candidate: int AnimatedGIF::playFrame(bool, int*, void*)
+     int playFrame(bool bSync, int *delayMilliseconds, void *pUser = NULL);
+         ^~~~~~~~~
+C:\Users\Administrator\Documents\Arduino\libraries\AnimatedGIF\src/AnimatedGIF.h:228:9: note:   candidate expects 3 arguments, 1 provided
+C:\Users\Administrator\AppData\Local\Temp\.arduinoIDE-unsaved202585-364-h24lcg.ml8z5\sketch_sep5a\sketch_sep5a.ino:134:9: error: 'class AnimatedGIF' has no member named 'update'
+     gif.update();
+         ^~~~~~
+C:\Users\Administrator\AppData\Local\Temp\.arduinoIDE-unsaved202585-364-h24lcg.ml8z5\sketch_sep5a\sketch_sep5a.ino: In function 'void GIFDraw(GIFDRAW*)':
+C:\Users\Administrator\AppData\Local\Temp\.arduinoIDE-unsaved202585-364-h24lcg.ml8z5\sketch_sep5a\sketch_sep5a.ino:142:29: error: cannot convert 'uint8_t* {aka unsigned char*}' to 'uint16_t* {aka short unsigned int*}' in initialization
+   uint16_t *bitmap = pDraw->pPixels;
+                             ^~~~~~~
+C:\Users\Administrator\AppData\Local\Temp\.arduinoIDE-unsaved202585-364-h24lcg.ml8z5\sketch_sep5a\sketch_sep5a.ino:143:24: error: 'GIFDRAW {aka struct gif_draw_tag}' has no member named 'x'
+   tft.pushImage(pDraw->x, pDraw->y, pDraw->iWidth, pDraw->iHeight, bitmap);
+                        ^
+Multiple libraries were found for "SD.h"
+  Used: C:\Users\Administrator\Documents\Arduino\libraries\SD
+  Not used: C:\Users\Administrator\AppData\Local\Arduino15\libraries\SD
+exit status 1
+
+Compilation error: 'class arduino::UART' has no member named 'printf'; did you mean 'print'?
